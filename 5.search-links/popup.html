@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <h2>🔍 Search Links Extractor</h2>
+
+    <button id="extractBtn">📋 Extract All Search Links</button>
+
+    <div class="export-buttons">
+        <button id="copyAllBtn" class="export-btn" style="background-color: #4CAF50;">📄 Copy All</button>
+        <button id="exportJSONBtn" class="export-btn" style="background-color: #2196F3;">💾 Export JSON</button>
+        <button id="exportCSVBtn" class="export-btn" style="background-color: #ff9800;">📊 Export CSV</button>
+    </div>
+
+    <div id="status"></div>
+    <div id="stats" class="stats" style="display: none;"></div>
+    <div id="linksContainer"></div>
+
+    <script type="text/javascript" src="./src/js/popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Search Links Extractor",
+  "version": "1.0",
+  "description": "Extract all search result links with titles and URLs",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Extract Search Links"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "css": ["src/css/style.css"]
+    }
+  ]
+}
+
+
