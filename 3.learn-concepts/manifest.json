@@ -4,11 +4,18 @@
   "version": "1.23.1",
   "description": "Learn Chrome Extension",
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "src/background.js"
   },
   "action": {
-    "default_title": "Extension Concepts"
+    "default_title": "Extension Concepts",
+    "default_popup": "popup.html"
   },
   "permissions": ["activeTab", "scripting", "contextMenus"],
-  "host_permissions": ["https://www.google.com/*"]
+  "host_permissions": ["*://www.google.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/*"],
+      "js": ["src/content.js"]
+    }
+  ]
 }
